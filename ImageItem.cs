@@ -23,7 +23,7 @@ namespace ImageCompare
         public string ImagePath
         {
             get { return _imagePath; }
-            set { _imagePath = labelPath.Text = value; }
+            set { _imagePath = textBoxPath.Text = value; }
         }
         public string ImageName
         {

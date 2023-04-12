@@ -28,19 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ImageItem));
             pictureBox = new PictureBox();
             labelIndex = new Label();
-            labelPath = new Label();
             labelSize = new Label();
             labelName = new Label();
+            textBoxPath = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
             SuspendLayout();
             // 
             // pictureBox
             // 
             pictureBox.BackColor = SystemColors.Control;
-            pictureBox.Image = (Image)resources.GetObject("pictureBox.Image");
             pictureBox.Location = new Point(3, 3);
             pictureBox.Name = "pictureBox";
             pictureBox.Size = new Size(144, 144);
@@ -58,17 +56,6 @@
             labelIndex.Size = new Size(21, 24);
             labelIndex.TabIndex = 1;
             labelIndex.Text = "0";
-            // 
-            // labelPath
-            // 
-            labelPath.AutoSize = true;
-            labelPath.BackColor = Color.Transparent;
-            labelPath.Font = new Font("Trebuchet MS", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelPath.Location = new Point(153, 129);
-            labelPath.Name = "labelPath";
-            labelPath.Size = new Size(73, 18);
-            labelPath.TabIndex = 2;
-            labelPath.Text = "Image Path";
             // 
             // labelSize
             // 
@@ -92,14 +79,26 @@
             labelName.TabIndex = 4;
             labelName.Text = "Image Name";
             // 
+            // textBoxPath
+            // 
+            textBoxPath.BackColor = Color.FromArgb(224, 224, 224);
+            textBoxPath.Location = new Point(149, 95);
+            textBoxPath.MaxLength = 236;
+            textBoxPath.Multiline = true;
+            textBoxPath.Name = "textBoxPath";
+            textBoxPath.ReadOnly = true;
+            textBoxPath.Size = new Size(351, 55);
+            textBoxPath.TabIndex = 5;
+            textBoxPath.Text = "Image Path";
+            // 
             // ImageItem
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(224, 224, 224);
+            Controls.Add(textBoxPath);
             Controls.Add(labelName);
             Controls.Add(labelSize);
-            Controls.Add(labelPath);
             Controls.Add(labelIndex);
             Controls.Add(pictureBox);
             Name = "ImageItem";
@@ -114,8 +113,8 @@
 
         private PictureBox pictureBox;
         private Label labelIndex;
-        private Label labelPath;
         private Label labelSize;
         private Label labelName;
+        private TextBox textBoxPath;
     }
 }
